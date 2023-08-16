@@ -16,7 +16,7 @@ if len(sys.argv) < 5:
 
 # parametros de entrada
 id_webcam = int(sys.argv[1])
-xml = sys.argv[2];
+xml = sys.argv[2]
 scale_factor = float(sys.argv[3])
 min_neighbors = int(sys.argv[4])
 
