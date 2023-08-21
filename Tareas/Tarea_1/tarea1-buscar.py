@@ -16,6 +16,8 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
         sys.exit(1)
     # Implementar la tarea:
     #* 1-leer imágenes en dir_input_imagenes_Q y calcular descriptores cada imagen
+    lista_nombres = []
+    matriz_descriptores = []
     for nombre in os.listdir(dir_input_imagenes_Q):
         if not nombre.endswith(".jpg"):
             continue
@@ -50,11 +52,15 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
             matriz_descriptores = descriptor
         else:
             matriz_descriptores = numpy.vstack([matriz_descriptores, descriptor])
+        # agregar nombre del archivo a la lista de nombres
+        lista_nombres.append(nombre)
     
     #* 2-leer descriptores de R de dir_input_descriptores_R
-    descriptores_R = []
+    descriptores_R = "{}/{}".format(dir_input_descriptores_R, "descriptores.npy")
+    nombres_R = "{}/{}".format(dir_input_descriptores_R, "nombres.data")
+    descriptores = numpy.load(descriptores_R)
     #* 3-para cada descriptor q localizar el mas cercano en R
-    matriz_distancias = scipy.spatial.distance.cdist(matriz_descriptores, matriz_descriptores, metric='cityblock')
+    matriz_distancias = scipy.spatial.distance.cdist(matriz_descriptores, descriptores, metric='cityblock')
     #* 4-escribir en file_output_resultados haciendo print() con el formato: 
     with open(file_output_resultados, 'w') as f:
         pass
