@@ -11,13 +11,15 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
     elif os.path.exists(dir_output_descriptores_R):
         print("ERROR: ya existe directorio {}".format(dir_output_descriptores_R))
         sys.exit(1)
-    #* 1-leer imágenes en dir_input_imagenes_R y calcular descriptores cada imagen
+
+    # ----- Descriptores -----
     lista_nombres = []
-    matriz_descriptores = []
+    matriz_histograma = []
     for nombre in os.listdir(dir_input_imagenes_R):
         if not nombre.endswith(".jpg"):
             continue
         archivo_imagen = "{}/{}".format(dir_input_imagenes_R, nombre)
+        # ----- Histograma por Zonas -----
         # divisiones
         num_zonas_x = 1
         num_zonas_y = 16
@@ -44,18 +46,29 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
                 # agregar descriptor de la zona al descriptor global
                 descriptor.extend(histograma)
         # agregar descriptor a la matriz de descriptores
-        if len(matriz_descriptores) == 0:
-            matriz_descriptores = descriptor
+        if len(matriz_histograma) == 0:
+            matriz_histograma = descriptor
         else:
-            matriz_descriptores = numpy.vstack([matriz_descriptores, descriptor])
+            matriz_histograma = numpy.vstack([matriz_histograma, descriptor])
+
+        # ----- OMD -----
+        imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
+        imagen_2 = cv2.resize(imagen_1, (4, 4), interpolation=cv2.INTER_AREA)
+        descriptor_omd = imagen_2.flatten()
+        posiciones = numpy.argsort(descriptor_omd)
+        for i in range(len(posiciones)):
+            descriptor_omd[posiciones[i]] = i
+
         # agregar nombre del archivo a la lista de nombres
         lista_nombres.append(nombre)
 
     #* 3-escribir en dir_output_descriptores_R los descriptores calculados (crear uno o más archivos)
     os.makedirs(dir_output_descriptores_R, exist_ok=True)
-    archivo_salida = "{}/{}".format(dir_output_descriptores_R, "descriptores.npy")
+    archivo_histograma = "{}/{}".format(dir_output_descriptores_R, "descriptor_histograma.npy")
+    archivo_omd = "{}/{}".format(dir_output_descriptores_R, "descriptor_omd.npy")
     nombres_salida = "{}/{}".format(dir_output_descriptores_R, "nombres.data")
-    numpy.save(archivo_salida, matriz_descriptores)
+    numpy.save(archivo_histograma, matriz_histograma)
+    numpy.save(archivo_omd, descriptor_omd)
     with open(nombres_salida, "w") as f:
         for i in range(len(lista_nombres)):
             f.write(str(lista_nombres[i]) + "\n")

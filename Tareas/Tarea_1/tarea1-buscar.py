@@ -14,14 +14,15 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
     elif os.path.exists(file_output_resultados):
         print("ERROR: ya existe archivo {}".format(file_output_resultados))
         sys.exit(1)
-    # Implementar la tarea:
-    #* 1-leer imágenes en dir_input_imagenes_Q y calcular descriptores cada imagen
+
+    # ----- Descriptores -----
     lista_nombres = []
-    matriz_descriptores = []
+    matriz_histograma = []
     for nombre in os.listdir(dir_input_imagenes_Q):
         if not nombre.endswith(".jpg"):
             continue
         archivo_imagen = "{}/{}".format(dir_input_imagenes_Q, nombre)
+        # ----- Histograma por Zonas -----
         # divisiones
         num_zonas_x = 1
         num_zonas_y = 16
@@ -48,35 +49,48 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
                 # agregar descriptor de la zona al descriptor global
                 descriptor.extend(histograma)
         # agregar descriptor a la matriz de descriptores
-        if len(matriz_descriptores) == 0:
-            matriz_descriptores = descriptor
+        if len(matriz_histograma) == 0:
+            matriz_histograma = descriptor
         else:
-            matriz_descriptores = numpy.vstack([matriz_descriptores, descriptor])
+            matriz_histograma = numpy.vstack([matriz_histograma, descriptor])
+
+        # ----- OMD -----
+        imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
+        imagen_2 = cv2.resize(imagen_1, (4, 4), interpolation=cv2.INTER_AREA)
+        matriz_omd = imagen_2.flatten()
+        posiciones = numpy.argsort(matriz_omd)
+        for i in range(len(posiciones)):
+            matriz_omd[posiciones[i]] = i
+
         # agregar nombre del archivo a la lista de nombres
         lista_nombres.append(nombre)
-    
+
     #* 2-leer descriptores de R de dir_input_descriptores_R
-    descriptores_R = "{}/{}".format(dir_input_descriptores_R, "descriptores.npy")
-    nombres_R = "{}/{}".format(dir_input_descriptores_R, "nombres.data")
+    archivo_histograma = "{}/{}".format(dir_input_descriptores_R, "descriptor_histograma.npy")
     with open(nombres_R) as f:
         lista_R = f.readlines()
-    descriptores = numpy.load(descriptores_R)
+    descriptor_histograma = numpy.load(archivo_histograma)
     #* 3-para cada descriptor q localizar el mas cercano en R
-    matriz_distancias = scipy.spatial.distance.cdist(matriz_descriptores, descriptores, metric='cityblock')
+    distancia_histograma = scipy.spatial.distance.cdist(matriz_histograma, descriptor_histograma, metric='cityblock')
     #* 4-escribir en file_output_resultados haciendo print() con el formato:
-    numpy.fill_diagonal(matriz_distancias, numpy.inf)
-    # obtener la posicion del mas cercano por fila
-    posiciones_minimas = numpy.argmin(matriz_distancias, axis=1)
-    valores_minimos = numpy.amin(matriz_distancias, axis=1)
-
+    numpy.fill_diagonal(distancia_histograma, numpy.inf)
+    # más cercanos por histograma
+    posiciones_minimas = numpy.argmin(distancia_histograma, axis=1)
+    valores_minimos = numpy.amin(distancia_histograma, axis=1)
     resultado_mas_cercanos = []
 
-    for i in range(len(matriz_distancias)):
+    for i in range(len(distancia_histograma)):
         query = lista_nombres[i]
         distancia = valores_minimos[i]
         mas_cercano = lista_R[posiciones_minimas[i]]
         resultado_mas_cercanos.append([query, mas_cercano, distancia])
-    
+    # más cercanos por OMD
+    archivo_omd = "{}/{}".format(dir_input_descriptores_R, "descriptor_omd.npy")
+    descriptor_omd = numpy.load(archivo_omd)
+    distancia_omd = scipy.spatial.distance.cdist(matriz_omd, descriptor_omd, metric='hamming')
+
+    # output final
+    nombres_R = "{}/{}".format(dir_input_descriptores_R, "nombres.data")
     with open(file_output_resultados, 'w') as f:
         for elem in resultado_mas_cercanos:
             print("{}\t{}\t{}".format(elem[0], elem[1][0:-1], elem[2]), file=f)
