@@ -15,6 +15,8 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
     # ----- Descriptores -----
     lista_nombres = []
     matriz_histograma = []
+    matriz_omd = []
+    matriz_intensidad = []
     for nombre in os.listdir(dir_input_imagenes_R):
         if not nombre.endswith(".jpg"):
             continue
@@ -54,21 +56,37 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
         # ----- OMD -----
         imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
         imagen_2 = cv2.resize(imagen_1, (4, 4), interpolation=cv2.INTER_AREA)
-        descriptor_omd = imagen_2.flatten()
-        posiciones = numpy.argsort(descriptor_omd)
+        descriptor = imagen_2.flatten()
+        posiciones = numpy.argsort(descriptor)
         for i in range(len(posiciones)):
-            descriptor_omd[posiciones[i]] = i
+            descriptor[posiciones[i]] = i
+        if len(matriz_omd) == 0:
+            matriz_omd = descriptor
+        else:
+            matriz_omd = numpy.vstack([matriz_omd, descriptor])
+
+        # ----- Vector de Intensidades -----
+        imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
+        imagen_2 = cv2.resize(imagen_1, (20, 20), interpolation=cv2.INTER_AREA)
+        # flatten convierte una matriz de nxm en un array de largo nxm
+        descriptor = imagen_2.flatten()
+        if len(matriz_intensidad) == 0:
+            matriz_intensidad = descriptor
+        else:
+            matriz_intensidad = numpy.vstack([matriz_intensidad, descriptor])
 
         # agregar nombre del archivo a la lista de nombres
         lista_nombres.append(nombre)
 
-    #* 3-escribir en dir_output_descriptores_R los descriptores calculados (crear uno o más archivos)
+    # guardar info en archivos
     os.makedirs(dir_output_descriptores_R, exist_ok=True)
     archivo_histograma = "{}/{}".format(dir_output_descriptores_R, "descriptor_histograma.npy")
     archivo_omd = "{}/{}".format(dir_output_descriptores_R, "descriptor_omd.npy")
+    archivo_intensidad = "{}/{}".format(dir_output_descriptores_R, "descriptor_intensidad.npy")
     nombres_salida = "{}/{}".format(dir_output_descriptores_R, "nombres.data")
     numpy.save(archivo_histograma, matriz_histograma)
-    numpy.save(archivo_omd, descriptor_omd)
+    numpy.save(archivo_omd, matriz_omd)
+    numpy.save(archivo_intensidad, matriz_intensidad)
     with open(nombres_salida, "w") as f:
         for i in range(len(lista_nombres)):
             f.write(str(lista_nombres[i]) + "\n")

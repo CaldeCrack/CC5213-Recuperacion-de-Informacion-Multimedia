@@ -18,6 +18,8 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
     # ----- Descriptores -----
     lista_nombres = []
     matriz_histograma = []
+    matriz_omd = []
+    matriz_intensidad = []
     for nombre in os.listdir(dir_input_imagenes_Q):
         if not nombre.endswith(".jpg"):
             continue
@@ -57,40 +59,67 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
         # ----- OMD -----
         imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
         imagen_2 = cv2.resize(imagen_1, (4, 4), interpolation=cv2.INTER_AREA)
-        matriz_omd = imagen_2.flatten()
-        posiciones = numpy.argsort(matriz_omd)
+        descriptor = imagen_2.flatten()
+        posiciones = numpy.argsort(descriptor)
         for i in range(len(posiciones)):
-            matriz_omd[posiciones[i]] = i
+            descriptor[posiciones[i]] = i
+        if len(matriz_omd) == 0:
+            matriz_omd = descriptor
+        else:
+            matriz_omd = numpy.vstack([matriz_omd, descriptor])
+
+        # ----- Vector de Intensidades -----
+        imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
+        imagen_2 = cv2.resize(imagen_1, (20, 20), interpolation=cv2.INTER_AREA)
+        # flatten convierte una matriz de nxm en un array de largo nxm
+        descriptor = imagen_2.flatten()
+        if len(matriz_intensidad) == 0:
+            matriz_intensidad = descriptor
+        else:
+            matriz_intensidad = numpy.vstack([matriz_intensidad, descriptor])
 
         # agregar nombre del archivo a la lista de nombres
         lista_nombres.append(nombre)
 
-    #* 2-leer descriptores de R de dir_input_descriptores_R
-    archivo_histograma = "{}/{}".format(dir_input_descriptores_R, "descriptor_histograma.npy")
+    # nombre de los archivos
+    nombres_R = "{}/{}".format(dir_input_descriptores_R, "nombres.data")
     with open(nombres_R) as f:
         lista_R = f.readlines()
-    descriptor_histograma = numpy.load(archivo_histograma)
-    #* 3-para cada descriptor q localizar el mas cercano en R
-    distancia_histograma = scipy.spatial.distance.cdist(matriz_histograma, descriptor_histograma, metric='cityblock')
-    #* 4-escribir en file_output_resultados haciendo print() con el formato:
-    numpy.fill_diagonal(distancia_histograma, numpy.inf)
-    # más cercanos por histograma
-    posiciones_minimas = numpy.argmin(distancia_histograma, axis=1)
-    valores_minimos = numpy.amin(distancia_histograma, axis=1)
-    resultado_mas_cercanos = []
 
-    for i in range(len(distancia_histograma)):
-        query = lista_nombres[i]
-        distancia = valores_minimos[i]
-        mas_cercano = lista_R[posiciones_minimas[i]]
-        resultado_mas_cercanos.append([query, mas_cercano, distancia])
+    # más cercanos por Histograma
+    archivo_histograma = "{}/{}".format(dir_input_descriptores_R, "descriptor_histograma.npy")
+    descriptor_histograma = numpy.load(archivo_histograma)
+    distancia_histograma = scipy.spatial.distance.cdist(matriz_histograma, descriptor_histograma, metric='cityblock')
+    # normalización
+    distancia_histograma /= numpy.max(distancia_histograma)
+
     # más cercanos por OMD
     archivo_omd = "{}/{}".format(dir_input_descriptores_R, "descriptor_omd.npy")
     descriptor_omd = numpy.load(archivo_omd)
     distancia_omd = scipy.spatial.distance.cdist(matriz_omd, descriptor_omd, metric='hamming')
+    # normalización
+    distancia_omd /= numpy.mean(distancia_omd)
+
+    # más cercanos por Vector de Intensidades
+    archivo_intensidad = "{}/{}".format(dir_input_descriptores_R, "descriptor_intensidad.npy")
+    descriptor_intensidad = numpy.load(archivo_intensidad)
+    distancia_intensidad = scipy.spatial.distance.cdist(matriz_intensidad, descriptor_intensidad, metric='cityblock')
+    # normalización
+    distancia_intensidad /= numpy.mean(distancia_intensidad)
+
+    # más cercanos
+    min_matrix = numpy.minimum(distancia_histograma, distancia_omd)
+    min_matrix = numpy.minimum(min_matrix, distancia_intensidad)
+    posiciones_minimas = numpy.argmin(min_matrix, axis=1)
+    valores_minimos = numpy.amin(min_matrix, axis=1)
+    resultado_mas_cercanos = []
+    for i in range(len(min_matrix)):
+        query = lista_nombres[i]
+        distancia = valores_minimos[i]
+        mas_cercano = lista_R[posiciones_minimas[i]]
+        resultado_mas_cercanos.append([query, mas_cercano, distancia])
 
     # output final
-    nombres_R = "{}/{}".format(dir_input_descriptores_R, "nombres.data")
     with open(file_output_resultados, 'w') as f:
         for elem in resultado_mas_cercanos:
             print("{}\t{}\t{}".format(elem[0], elem[1][0:-1], elem[2]), file=f)
