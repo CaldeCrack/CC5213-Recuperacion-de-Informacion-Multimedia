@@ -24,8 +24,8 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
         archivo_imagen = "{}/{}".format(dir_input_imagenes_Q, nombre)
         # divisiones
         num_zonas_x = 1
-        num_zonas_y = 8
-        num_bins_por_zona = 8
+        num_zonas_y = 16
+        num_bins_por_zona = 16
         ecualizar = False
         # leer imagen
         imagen = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)

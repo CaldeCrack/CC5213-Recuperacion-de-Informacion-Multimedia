@@ -20,8 +20,8 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
         archivo_imagen = "{}/{}".format(dir_input_imagenes_R, nombre)
         # divisiones
         num_zonas_x = 1
-        num_zonas_y = 8 
-        num_bins_por_zona = 8
+        num_zonas_y = 16
+        num_bins_por_zona = 16
         ecualizar = False
         # leer imagen
         imagen = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
