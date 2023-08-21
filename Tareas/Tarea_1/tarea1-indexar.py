@@ -54,7 +54,7 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
     #* 3-escribir en dir_output_descriptores_R los descriptores calculados (crear uno o más archivos)
     os.makedirs(dir_output_descriptores_R, exist_ok=True)
     archivo_salida = "{}/{}".format(dir_output_descriptores_R, "descriptores.npy")
-    nombres_salida = "{}/{}".format(dir_output_descriptores_R, "nombres.npy")
+    nombres_salida = "{}/{}".format(dir_output_descriptores_R, "nombres.data")
     numpy.save(archivo_salida, matriz_descriptores)
     with open(nombres_salida, "w") as f:
         for i in range(len(lista_nombres)):
