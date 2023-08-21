@@ -62,7 +62,7 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
         lista_R = f.readlines()
     descriptores = numpy.load(descriptores_R)
     #* 3-para cada descriptor q localizar el mas cercano en R
-    matriz_distancias = scipy.spatial.distance.cdist(matriz_descriptores, descriptores, metric='cityblock')
+    matriz_distancias = scipy.spatial.distance.cdist(descriptores, matriz_descriptores, metric='cityblock')
     #* 4-escribir en file_output_resultados haciendo print() con el formato:
     numpy.fill_diagonal(matriz_distancias, numpy.inf)
     # obtener la posicion del mas cercano por fila
@@ -79,7 +79,7 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
     
     with open(file_output_resultados, 'w') as f:
         for elem in resultado_mas_cercanos:
-            print("{}\t{}\t{}".format(elem[0], elem[1], elem[2]), file=f)
+            print("{}\t{}\t{}".format(elem[0][0:-1], elem[1], elem[2]), file=f)
 
 # inicio de la tarea
 if len(sys.argv) < 4:
