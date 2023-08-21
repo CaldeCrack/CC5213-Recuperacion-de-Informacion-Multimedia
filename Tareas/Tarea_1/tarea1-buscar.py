@@ -23,10 +23,10 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
             continue
         archivo_imagen = "{}/{}".format(dir_input_imagenes_Q, nombre)
         # divisiones
-        num_zonas_x = 2
-        num_zonas_y = 2 
+        num_zonas_x = 1
+        num_zonas_y = 8
         num_bins_por_zona = 8
-        ecualizar = True
+        ecualizar = False
         # leer imagen
         imagen = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
         if ecualizar:
@@ -62,7 +62,7 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
         lista_R = f.readlines()
     descriptores = numpy.load(descriptores_R)
     #* 3-para cada descriptor q localizar el mas cercano en R
-    matriz_distancias = scipy.spatial.distance.cdist(descriptores, matriz_descriptores, metric='cityblock')
+    matriz_distancias = scipy.spatial.distance.cdist(matriz_descriptores, descriptores, metric='cityblock')
     #* 4-escribir en file_output_resultados haciendo print() con el formato:
     numpy.fill_diagonal(matriz_distancias, numpy.inf)
     # obtener la posicion del mas cercano por fila
@@ -72,14 +72,14 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
     resultado_mas_cercanos = []
 
     for i in range(len(matriz_distancias)):
-        query = lista_R[i]
+        query = lista_nombres[i]
         distancia = valores_minimos[i]
-        mas_cercano = lista_nombres[posiciones_minimas[i]]
+        mas_cercano = lista_R[posiciones_minimas[i]]
         resultado_mas_cercanos.append([query, mas_cercano, distancia])
     
     with open(file_output_resultados, 'w') as f:
         for elem in resultado_mas_cercanos:
-            print("{}\t{}\t{}".format(elem[0][0:-1], elem[1], elem[2]), file=f)
+            print("{}\t{}\t{}".format(elem[0], elem[1][0:-1], elem[2]), file=f)
 
 # inicio de la tarea
 if len(sys.argv) < 4:
