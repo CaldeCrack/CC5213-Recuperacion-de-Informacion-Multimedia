@@ -14,15 +14,13 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
         sys.exit(1)
     # Implementar la tarea:
     #  1-leer imágenes en dir_input_imagenes_R y calcular descriptores cada imagen
-    #    for nombre in os.listdir(dir_input_imagenes_R):
-    #        if not nombre.endswith(".jpg"):
-    #            continue
-    #        archivo_imagen = "{}/{}".format(dir_input_imagenes_R, nombre)
+    for nombre in os.listdir(dir_input_imagenes_R):
+        if not nombre.endswith(".jpg"):
+            continue
+        archivo_imagen = "{}/{}".format(dir_input_imagenes_R, nombre)
     #  3-escribir en dir_output_descriptores_R los descriptores calculados (crear uno o más archivos)
-    #    os.makedirs(dir_output_descriptores_R, exist_ok=True)
-    #    archivo_salida = "{}/{}".format(dir_output_descriptores_R, "descriptores.data")
-    # borrar la siguiente linea
-    print("ERROR: no implementado!")
+    os.makedirs(dir_output_descriptores_R, exist_ok=True)
+    archivo_salida = "{}/{}".format(dir_output_descriptores_R, "descriptores.data")
 
 
 # inicio de la tarea
