@@ -20,6 +20,7 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
     matriz_histograma = []
     matriz_omd = []
     matriz_intensidad = []
+    matriz_eh = []
     for nombre in os.listdir(dir_input_imagenes_Q):
         if not nombre.endswith(".jpg"):
             continue
@@ -78,6 +79,16 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
         else:
             matriz_intensidad = numpy.vstack([matriz_intensidad, descriptor])
 
+        # ----- EH -----
+        imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
+        imagen_1 = cv2.equalizeHist(imagen_1)
+        imagen_1 = cv2.resize(imagen_1, (10, 10), interpolation=cv2.INTER_AREA)
+        descriptor = imagen_1.flatten()
+        if len(matriz_eh) == 0:
+            matriz_eh = descriptor
+        else:
+            matriz_eh = numpy.vstack([matriz_eh, descriptor])
+
         # agregar nombre del archivo a la lista de nombres
         lista_nombres.append(nombre)
 
@@ -107,9 +118,17 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
     # normalización
     distancia_intensidad /= numpy.mean(distancia_intensidad)
 
+    # más cercanos por histograma ecualizado
+    archivo_eh = "{}/{}".format(dir_input_descriptores_R, "descriptor_eh.npy")
+    descriptor_eh = numpy.load(archivo_eh)
+    distancia_eh = scipy.spatial.distance.cdist(matriz_eh, descriptor_eh, metric='euclidean')
+    # normalización
+    distancia_eh /= numpy.mean(distancia_eh)
+
     # más cercanos
     min_matrix = numpy.minimum(distancia_histograma, distancia_omd)
-    min_matrix = numpy.minimum(min_matrix, distancia_intensidad)
+    min_matrix2 = numpy.minimum(distancia_eh, distancia_intensidad)
+    min_matrix = numpy.minimum(min_matrix, min_matrix2)
     posiciones_minimas = numpy.argmin(min_matrix, axis=1)
     valores_minimos = numpy.amin(min_matrix, axis=1)
     resultado_mas_cercanos = []

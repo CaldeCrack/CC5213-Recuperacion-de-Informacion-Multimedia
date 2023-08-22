@@ -17,6 +17,7 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
     matriz_histograma = []
     matriz_omd = []
     matriz_intensidad = []
+    matriz_eh = []
     for nombre in os.listdir(dir_input_imagenes_R):
         if not nombre.endswith(".jpg"):
             continue
@@ -75,6 +76,16 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
         else:
             matriz_intensidad = numpy.vstack([matriz_intensidad, descriptor])
 
+        # ----- EH -----
+        imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
+        imagen_1 = cv2.equalizeHist(imagen_1)
+        imagen_1 = cv2.resize(imagen_1, (10, 10), interpolation=cv2.INTER_AREA)
+        descriptor = imagen_1.flatten()
+        if len(matriz_eh) == 0:
+            matriz_eh = descriptor
+        else:
+            matriz_eh = numpy.vstack([matriz_eh, descriptor])
+
         # agregar nombre del archivo a la lista de nombres
         lista_nombres.append(nombre)
 
@@ -83,10 +94,12 @@ def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R):
     archivo_histograma = "{}/{}".format(dir_output_descriptores_R, "descriptor_histograma.npy")
     archivo_omd = "{}/{}".format(dir_output_descriptores_R, "descriptor_omd.npy")
     archivo_intensidad = "{}/{}".format(dir_output_descriptores_R, "descriptor_intensidad.npy")
+    archivo_eh = "{}/{}".format(dir_output_descriptores_R, "descriptor_eh.npy")
     nombres_salida = "{}/{}".format(dir_output_descriptores_R, "nombres.data")
     numpy.save(archivo_histograma, matriz_histograma)
     numpy.save(archivo_omd, matriz_omd)
     numpy.save(archivo_intensidad, matriz_intensidad)
+    numpy.save(archivo_eh, matriz_eh)
     with open(nombres_salida, "w") as f:
         for i in range(len(lista_nombres)):
             f.write(str(lista_nombres[i]) + "\n")
