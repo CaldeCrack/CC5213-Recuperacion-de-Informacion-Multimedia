@@ -69,7 +69,7 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
             matriz_omd = numpy.vstack([matriz_omd, descriptor])
 
         # ----- Vector de Intensidades -----
-        imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_GRAYSCALE)
+        imagen_1 = cv2.imread(archivo_imagen, cv2.IMREAD_COLOR)
         imagen_2 = cv2.resize(imagen_1, (20, 20), interpolation=cv2.INTER_AREA)
         # flatten convierte una matriz de nxm en un array de largo nxm
         descriptor = imagen_2.flatten()
