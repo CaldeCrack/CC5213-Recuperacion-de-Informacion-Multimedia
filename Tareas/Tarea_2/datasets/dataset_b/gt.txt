@@ -1,0 +1,74 @@
+IGUAL	radio-disney-ar-6.m4a	75.5	45.6	Camilo Sesto - Jamas (46).m4a
+BAJO	radio-disney-ar-6.m4a	248.6	7.0	Emmanuel - Toda la vida (7).m4a
+ALTO	radio-disney-ar-6.m4a	370.7	37.6	Los Bunkers - Ven Aqui (38).m4a
+MIXED	radio-disney-ar-6.m4a	572.6	19.8	Metallica - Master Of Puppets (20).m4a
+COMPRESS	radio-disney-ar-6.m4a	698.0	23.7	Vivialdi - Invierno - Allegro non molto (24).m4a
+IGUAL	radio-disney-ar-6.m4a	848.9	7.0	Emmanuel - Toda la vida (7).m4a
+BAJO	radio-disney-ar-6.m4a	1015.3	36.9	El General - Muevelo (37).m4a
+ALTO	radio-disney-ar-6.m4a	1142.6	16.6	Chancho en Piedra - Sinfonia de cuna (17).m4a
+MIXED	radio-disney-ar-6.m4a	1270.4	45.6	Camilo Sesto - Jamas (46).m4a
+COMPRESS	radio-disney-ar-6.m4a	1387.2	16.4	B.B. King - Three Oclock Blues (16).m4a
+IGUAL	radio-disney-ar-6.m4a	1571.9	19.8	Metallica - Master Of Puppets (20).m4a
+BAJO	radio-disney-ar-6.m4a	1688.9	36.9	El General - Muevelo (37).m4a
+ALTO	radio-disney-ar-6.m4a	1787.8	32.7	Little Richard - Tutti Frutti (33).m4a
+MIXED	radio-disney-ar-6.m4a	1976.9	45.6	Camilo Sesto - Jamas (46).m4a
+COMPRESS	radio-disney-ar-6.m4a	2172.9	19.8	Silvio Rodriguez - Playa Giron (20).m4a
+IGUAL	radio-disney-ar-6.m4a	2298.6	23.7	Vivialdi - Invierno - Allegro non molto (24).m4a
+BAJO	radio-disney-ar-6.m4a	2455.9	15.1	Combo Tortuga - Soy Feo Pero Rico (15).m4a
+ALTO	radio-disney-ar-6.m4a	2629.6	9.0	Green Day - Basket Case (9).m4a
+IGUAL	radio-disney-br-6.m4a	100.8	37.6	Los Bunkers - Ven Aqui (38).m4a
+BAJO	radio-disney-br-6.m4a	262.5	23.7	Vivialdi - Invierno - Allegro non molto (24).m4a
+ALTO	radio-disney-br-6.m4a	464.0	19.8	Silvio Rodriguez - Playa Giron (20).m4a
+MIXED	radio-disney-br-6.m4a	644.0	7.0	Emmanuel - Toda la vida (7).m4a
+COMPRESS	radio-disney-br-6.m4a	797.4	19.8	Silvio Rodriguez - Playa Giron (20).m4a
+IGUAL	radio-disney-br-6.m4a	994.9	18.9	La Cripta - El Gato Volador (19).m4a
+BAJO	radio-disney-br-6.m4a	1165.5	16.6	The Platters - Twilight Time (17).m4a
+ALTO	radio-disney-br-6.m4a	1252.5	7.0	Emmanuel - Toda la vida (7).m4a
+MIXED	radio-disney-br-6.m4a	1322.9	45.6	Camilo Sesto - Jamas (46).m4a
+COMPRESS	radio-disney-br-6.m4a	1488.4	19.8	Silvio Rodriguez - Playa Giron (20).m4a
+IGUAL	radio-disney-br-6.m4a	1646.4	32.7	Little Richard - Tutti Frutti (33).m4a
+BAJO	radio-disney-br-6.m4a	1779.8	45.6	Camilo Sesto - Jamas (46).m4a
+ALTO	radio-disney-br-6.m4a	1950.9	15.1	Combo Tortuga - Soy Feo Pero Rico (15).m4a
+MIXED	radio-disney-br-6.m4a	2044.6	20.2	Bob Marley - Could you be Loved (20).m4a
+COMPRESS	radio-disney-br-6.m4a	2185.2	23.7	Vivialdi - Invierno - Allegro non molto (24).m4a
+IGUAL	radio-disney-br-6.m4a	2295.4	16.4	B.B. King - Three Oclock Blues (16).m4a
+BAJO	radio-disney-br-6.m4a	2479.3	19.2	Depeche Mode - Personal Jesus (19).m4a
+ALTO	radio-disney-br-6.m4a	2647.3	19.8	Metallica - Master Of Puppets (20).m4a
+IGUAL	radio-disney-cl-6.m4a	83.0	37.6	Los Bunkers - Ven Aqui (38).m4a
+BAJO	radio-disney-cl-6.m4a	282.5	15.1	Combo Tortuga - Soy Feo Pero Rico (15).m4a
+ALTO	radio-disney-cl-6.m4a	445.2	37.6	Los Bunkers - Ven Aqui (38).m4a
+MIXED	radio-disney-cl-6.m4a	562.2	15.3	Chemical Brothers - Hey Girls Hey Boys (15).m4a
+COMPRESS	radio-disney-cl-6.m4a	718.9	7.0	Emmanuel - Toda la vida (7).m4a
+IGUAL	radio-disney-cl-6.m4a	788.0	19.2	Depeche Mode - Personal Jesus (19).m4a
+BAJO	radio-disney-cl-6.m4a	900.5	20.2	Bob Marley - Could you be Loved (20).m4a
+ALTO	radio-disney-cl-6.m4a	1066.6	32.7	Little Richard - Tutti Frutti (33).m4a
+MIXED	radio-disney-cl-6.m4a	1211.3	27.5	Mala junta - Chileno de corazon (28).m4a
+COMPRESS	radio-disney-cl-6.m4a	1337.4	16.4	B.B. King - Three Oclock Blues (16).m4a
+IGUAL	radio-disney-cl-6.m4a	1455.3	36.9	El General - Muevelo (37).m4a
+BAJO	radio-disney-cl-6.m4a	1641.3	19.2	Depeche Mode - Personal Jesus (19).m4a
+ALTO	radio-disney-cl-6.m4a	1839.1	32.7	Little Richard - Tutti Frutti (33).m4a
+MIXED	radio-disney-cl-6.m4a	1976.0	19.5	Los Jaivas - Mira ninita (20).m4a
+COMPRESS	radio-disney-cl-6.m4a	2097.3	45.6	Camilo Sesto - Jamas (46).m4a
+IGUAL	radio-disney-cl-6.m4a	2270.3	19.8	Silvio Rodriguez - Playa Giron (20).m4a
+BAJO	radio-disney-cl-6.m4a	2384.8	23.7	Vivialdi - Invierno - Allegro non molto (24).m4a
+ALTO	radio-disney-cl-6.m4a	2572.6	19.2	Depeche Mode - Personal Jesus (19).m4a
+IGUAL	radio-disney-mx-6.m4a	168.2	19.8	Metallica - Master Of Puppets (20).m4a
+BAJO	radio-disney-mx-6.m4a	319.7	32.7	Little Richard - Tutti Frutti (33).m4a
+ALTO	radio-disney-mx-6.m4a	485.3	23.7	Vivialdi - Invierno - Allegro non molto (24).m4a
+MIXED	radio-disney-mx-6.m4a	595.8	18.9	La Cripta - El Gato Volador (19).m4a
+COMPRESS	radio-disney-mx-6.m4a	754.4	16.4	B.B. King - Three Oclock Blues (16).m4a
+IGUAL	radio-disney-mx-6.m4a	860.1	27.5	Mala junta - Chileno de corazon (28).m4a
+BAJO	radio-disney-mx-6.m4a	992.5	19.2	Depeche Mode - Personal Jesus (19).m4a
+ALTO	radio-disney-mx-6.m4a	1099.6	18.8	The Beatles - Can't Buy Me Love (19).m4a
+MIXED	radio-disney-mx-6.m4a	1185.8	16.6	The Platters - Twilight Time (17).m4a
+COMPRESS	radio-disney-mx-6.m4a	1276.0	19.2	Depeche Mode - Personal Jesus (19).m4a
+IGUAL	radio-disney-mx-6.m4a	1363.0	15.1	Combo Tortuga - Soy Feo Pero Rico (15).m4a
+BAJO	radio-disney-mx-6.m4a	1466.6	18.9	La Cripta - El Gato Volador (19).m4a
+ALTO	radio-disney-mx-6.m4a	1654.4	16.6	Chancho en Piedra - Sinfonia de cuna (17).m4a
+MIXED	radio-disney-mx-6.m4a	1783.7	19.2	Depeche Mode - Personal Jesus (19).m4a
+COMPRESS	radio-disney-mx-6.m4a	1923.4	16.4	B.B. King - Three Oclock Blues (16).m4a
+IGUAL	radio-disney-mx-6.m4a	2079.1	20.2	Bob Marley - Could you be Loved (20).m4a
+BAJO	radio-disney-mx-6.m4a	2172.1	15.1	Combo Tortuga - Soy Feo Pero Rico (15).m4a
+ALTO	radio-disney-mx-6.m4a	2363.7	19.5	Los Jaivas - Mira ninita (20).m4a
+MIXED	radio-disney-mx-6.m4a	2490.9	45.6	Camilo Sesto - Jamas (46).m4a
+COMPRESS	radio-disney-mx-6.m4a	2631.0	32.7	Little Richard - Tutti Frutti (33).m4a

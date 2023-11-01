@@ -1,0 +1,72 @@
+IGUAL	radio-disney-ar-5.m4a	76.5	17.9	Patricio Manns - Arriba en la Cordillera (18).m4a
+BAJO	radio-disney-ar-5.m4a	184.3	38.6	Vivialdi - Invierno - Allegro non molto (39).m4a
+ALTO	radio-disney-ar-5.m4a	310.5	27.7	Kiss - Detroit Rock City (28).m4a
+MIXED	radio-disney-ar-5.m4a	437.2	27.3	Edith Piaf - Non Je Ne Regrette Rien (27).m4a
+COMPRESS	radio-disney-ar-5.m4a	541.1	26.7	Daddy Yankee - Gasolina (27).m4a
+IGUAL	radio-disney-ar-5.m4a	687.6	35.6	Bill Halley - Rock Around the Clock (36).m4a
+BAJO	radio-disney-ar-5.m4a	851.6	36.4	Shakira - Suerte (36).m4a
+ALTO	radio-disney-ar-5.m4a	992.1	12.9	Van Halen - Jump (13).m4a
+MIXED	radio-disney-ar-5.m4a	1116.1	36.4	Shakira - Suerte (36).m4a
+COMPRESS	radio-disney-ar-5.m4a	1282.4	42.5	Iron Maiden - Run To The Hills (42).m4a
+IGUAL	radio-disney-ar-5.m4a	1465.4	21.8	Jose Luis Rodriguez - Pavo Real (22).m4a
+BAJO	radio-disney-ar-5.m4a	1581.8	36.4	Shakira - Suerte (36).m4a
+ALTO	radio-disney-ar-5.m4a	1681.6	12.9	Van Halen - Jump (13).m4a
+MIXED	radio-disney-ar-5.m4a	1791.2	36.4	Shakira - Suerte (36).m4a
+COMPRESS	radio-disney-ar-5.m4a	1940.9	35.6	Bill Halley - Rock Around the Clock (36).m4a
+IGUAL	radio-disney-ar-5.m4a	2141.5	26.7	Daddy Yankee - Gasolina (27).m4a
+BAJO	radio-disney-ar-5.m4a	2297.3	8.1	Elvis Presley - Love Me Tender (8).m4a
+ALTO	radio-disney-ar-5.m4a	2383.4	33.9	Pimpinela - Olvidame y pega la vuelta (34).m4a
+MIXED	radio-disney-ar-5.m4a	2498.6	18.8	Reel 2 Real - I Like To Move It (19).m4a
+COMPRESS	radio-disney-ar-5.m4a	2600.3	17.0	31 Minutos - Bailan Sin Cesar (17).m4a
+IGUAL	radio-disney-br-5.m4a	120.7	42.5	Iron Maiden - Run To The Hills (42).m4a
+BAJO	radio-disney-br-5.m4a	317.9	36.0	Cachureos - A mover el pollo (36).m4a
+ALTO	radio-disney-br-5.m4a	453.1	19.0	Michael Jackson - Thriller (19).m4a
+MIXED	radio-disney-br-5.m4a	538.4	36.4	Shakira - Suerte (36).m4a
+COMPRESS	radio-disney-br-5.m4a	741.7	22.9	Paul Anka - Diana (23).m4a
+IGUAL	radio-disney-br-5.m4a	856.3	33.9	Pimpinela - Olvidame y pega la vuelta (34).m4a
+BAJO	radio-disney-br-5.m4a	1055.9	17.9	Patricio Manns - Arriba en la Cordillera (18).m4a
+ALTO	radio-disney-br-5.m4a	1246.8	33.9	Pimpinela - Olvidame y pega la vuelta (34).m4a
+MIXED	radio-disney-br-5.m4a	1414.7	18.8	Reel 2 Real - I Like To Move It (19).m4a
+COMPRESS	radio-disney-br-5.m4a	1565.8	36.4	Shakira - Suerte (36).m4a
+IGUAL	radio-disney-br-5.m4a	1707.2	2.9	New Order - Blue Monday (3).m4a
+BAJO	radio-disney-br-5.m4a	1873.1	36.4	Shakira - Suerte (36).m4a
+ALTO	radio-disney-br-5.m4a	1971.6	33.6	The Champs - Tequila  (34).m4a
+MIXED	radio-disney-br-5.m4a	2081.0	36.0	Cachureos - A mover el pollo (36).m4a
+COMPRESS	radio-disney-br-5.m4a	2292.1	27.7	Kiss - Detroit Rock City (28).m4a
+IGUAL	radio-disney-br-5.m4a	2495.6	21.8	Jose Luis Rodriguez - Pavo Real (22).m4a
+BAJO	radio-disney-br-5.m4a	2595.3	36.4	Shakira - Suerte (36).m4a
+IGUAL	radio-disney-cl-5.m4a	146.8	12.9	Van Halen - Jump (13).m4a
+BAJO	radio-disney-cl-5.m4a	244.7	36.4	Shakira - Suerte (36).m4a
+ALTO	radio-disney-cl-5.m4a	408.4	27.7	Kiss - Detroit Rock City (28).m4a
+MIXED	radio-disney-cl-5.m4a	613.7	38.6	Vivialdi - Invierno - Allegro non molto (39).m4a
+COMPRESS	radio-disney-cl-5.m4a	713.4	22.9	Paul Anka - Diana (23).m4a
+IGUAL	radio-disney-cl-5.m4a	866.4	27.3	Edith Piaf - Non Je Ne Regrette Rien (27).m4a
+BAJO	radio-disney-cl-5.m4a	1061.3	27.7	Kiss - Detroit Rock City (28).m4a
+ALTO	radio-disney-cl-5.m4a	1157.2	33.6	The Champs - Tequila  (34).m4a
+MIXED	radio-disney-cl-5.m4a	1349.7	26.7	Daddy Yankee - Gasolina (27).m4a
+COMPRESS	radio-disney-cl-5.m4a	1455.8	21.8	Jose Luis Rodriguez - Pavo Real (22).m4a
+IGUAL	radio-disney-cl-5.m4a	1555.5	26.7	Daddy Yankee - Gasolina (27).m4a
+BAJO	radio-disney-cl-5.m4a	1651.7	18.8	Reel 2 Real - I Like To Move It (19).m4a
+ALTO	radio-disney-cl-5.m4a	1833.2	2.9	New Order - Blue Monday (3).m4a
+MIXED	radio-disney-cl-5.m4a	1979.3	38.6	Vivialdi - Invierno - Allegro non molto (39).m4a
+COMPRESS	radio-disney-cl-5.m4a	2172.4	26.7	Daddy Yankee - Gasolina (27).m4a
+IGUAL	radio-disney-cl-5.m4a	2263.3	17.0	31 Minutos - Bailan Sin Cesar (17).m4a
+BAJO	radio-disney-cl-5.m4a	2415.0	33.6	The Champs - Tequila  (34).m4a
+ALTO	radio-disney-cl-5.m4a	2584.0	27.3	Edith Piaf - Non Je Ne Regrette Rien (27).m4a
+IGUAL	radio-disney-mx-5.m4a	78.3	38.6	Vivialdi - Invierno - Allegro non molto (39).m4a
+BAJO	radio-disney-mx-5.m4a	192.6	36.0	Cachureos - A mover el pollo (36).m4a
+ALTO	radio-disney-mx-5.m4a	380.6	22.9	Paul Anka - Diana (23).m4a
+MIXED	radio-disney-mx-5.m4a	551.1	33.9	Pimpinela - Olvidame y pega la vuelta (34).m4a
+COMPRESS	radio-disney-mx-5.m4a	763.7	17.9	Patricio Manns - Arriba en la Cordillera (18).m4a
+IGUAL	radio-disney-mx-5.m4a	873.5	41.8	Michael Sembello - Maniac (42).m4a
+BAJO	radio-disney-mx-5.m4a	1061.9	2.9	New Order - Blue Monday (3).m4a
+ALTO	radio-disney-mx-5.m4a	1183.5	38.6	Vivialdi - Invierno - Allegro non molto (39).m4a
+MIXED	radio-disney-mx-5.m4a	1288.4	19.0	Michael Jackson - Thriller (19).m4a
+COMPRESS	radio-disney-mx-5.m4a	1439.7	21.8	Jose Luis Rodriguez - Pavo Real (22).m4a
+IGUAL	radio-disney-mx-5.m4a	1575.0	17.9	Patricio Manns - Arriba en la Cordillera (18).m4a
+BAJO	radio-disney-mx-5.m4a	1743.6	26.7	Daddy Yankee - Gasolina (27).m4a
+ALTO	radio-disney-mx-5.m4a	1948.5	33.9	Pimpinela - Olvidame y pega la vuelta (34).m4a
+MIXED	radio-disney-mx-5.m4a	2112.9	2.9	New Order - Blue Monday (3).m4a
+COMPRESS	radio-disney-mx-5.m4a	2249.0	21.8	Jose Luis Rodriguez - Pavo Real (22).m4a
+IGUAL	radio-disney-mx-5.m4a	2355.9	17.9	Patricio Manns - Arriba en la Cordillera (18).m4a
+BAJO	radio-disney-mx-5.m4a	2511.8	27.3	Edith Piaf - Non Je Ne Regrette Rien (27).m4a

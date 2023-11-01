@@ -1,0 +1,72 @@
+IGUAL	radio-disney-ar-3.m4a	129.2	23.2	The Doors - Break on through (23).m4a
+BAJO	radio-disney-ar-3.m4a	235.0	15.7	Oscar Arriagada - El twist del esqueleto (16).m4a
+ALTO	radio-disney-ar-3.m4a	318.4	41.7	Congreso - Hijo del Sol Luminoso (42).m4a
+MIXED	radio-disney-ar-3.m4a	459.1	25.8	El Guaton Loyola (26).m4a
+COMPRESS	radio-disney-ar-3.m4a	656.3	31.1	Los Jaivas - Mira ninita (31).m4a
+IGUAL	radio-disney-ar-3.m4a	813.6	13.2	Daft Punk - Around the world (13).m4a
+BAJO	radio-disney-ar-3.m4a	993.8	24.0	Ilegales - Taqui Taqui (24).m4a
+ALTO	radio-disney-ar-3.m4a	1174.8	15.7	Oscar Arriagada - El twist del esqueleto (16).m4a
+MIXED	radio-disney-ar-3.m4a	1255.5	37.9	Strauss - En las orillas del Danubio azul (38).m4a
+COMPRESS	radio-disney-ar-3.m4a	1431.7	13.2	Daft Punk - Around the world (13).m4a
+IGUAL	radio-disney-ar-3.m4a	1559.1	40.8	Michael Jackson - Billie Jean (41).m4a
+BAJO	radio-disney-ar-3.m4a	1684.5	24.0	Ilegales - Taqui Taqui (24).m4a
+ALTO	radio-disney-ar-3.m4a	1831.6	25.9	Bob Marley - Could you be Loved (26).m4a
+MIXED	radio-disney-ar-3.m4a	1922.0	25.8	El Guaton Loyola (26).m4a
+COMPRESS	radio-disney-ar-3.m4a	2060.9	24.0	Ilegales - Taqui Taqui (24).m4a
+IGUAL	radio-disney-ar-3.m4a	2253.5	23.2	The Doors - Break on through (23).m4a
+BAJO	radio-disney-ar-3.m4a	2360.3	24.0	Ilegales - Taqui Taqui (24).m4a
+ALTO	radio-disney-ar-3.m4a	2476.4	15.7	Motley Crue - Dr Feelgood (16).m4a
+MIXED	radio-disney-ar-3.m4a	2639.9	13.2	Daft Punk - Around the world (13).m4a
+IGUAL	radio-disney-br-3.m4a	83.2	24.0	Ilegales - Taqui Taqui (24).m4a
+BAJO	radio-disney-br-3.m4a	181.7	13.2	Daft Punk - Around the world (13).m4a
+ALTO	radio-disney-br-3.m4a	329.6	25.8	El Guaton Loyola (26).m4a
+MIXED	radio-disney-br-3.m4a	451.0	25.9	Bob Marley - Could you be Loved (26).m4a
+COMPRESS	radio-disney-br-3.m4a	636.6	33.2	Michael Jackson - Thriller (33).m4a
+IGUAL	radio-disney-br-3.m4a	817.2	29.3	Celia Cruz - La Vida es un Carnaval (29).m4a
+BAJO	radio-disney-br-3.m4a	998.9	24.0	Ilegales - Taqui Taqui (24).m4a
+ALTO	radio-disney-br-3.m4a	1155.2	37.9	Strauss - En las orillas del Danubio azul (38).m4a
+MIXED	radio-disney-br-3.m4a	1362.7	34.3	Paul Anka - Diana (34).m4a
+COMPRESS	radio-disney-br-3.m4a	1574.7	29.6	Juan Luis Guerra - El Costo de la vida (30).m4a
+IGUAL	radio-disney-br-3.m4a	1730.8	29.3	Celia Cruz - La Vida es un Carnaval (29).m4a
+BAJO	radio-disney-br-3.m4a	1868.0	15.7	Oscar Arriagada - El twist del esqueleto (16).m4a
+ALTO	radio-disney-br-3.m4a	2020.1	13.2	Daft Punk - Around the world (13).m4a
+MIXED	radio-disney-br-3.m4a	2133.6	37.9	Strauss - En las orillas del Danubio azul (38).m4a
+COMPRESS	radio-disney-br-3.m4a	2345.5	25.9	Bob Marley - Could you be Loved (26).m4a
+IGUAL	radio-disney-br-3.m4a	2453.6	34.3	Paul Anka - Diana (34).m4a
+BAJO	radio-disney-br-3.m4a	2634.4	32.0	Tchakabum - Danza da Maozinha (32).m4a
+IGUAL	radio-disney-cl-3.m4a	149.1	37.9	Strauss - En las orillas del Danubio azul (38).m4a
+BAJO	radio-disney-cl-3.m4a	281.2	25.9	Bob Marley - Could you be Loved (26).m4a
+ALTO	radio-disney-cl-3.m4a	426.7	13.2	Daft Punk - Around the world (13).m4a
+MIXED	radio-disney-cl-3.m4a	602.8	37.9	Strauss - En las orillas del Danubio azul (38).m4a
+COMPRESS	radio-disney-cl-3.m4a	740.6	32.4	La Cripta - El Gato Volador (32).m4a
+IGUAL	radio-disney-cl-3.m4a	926.8	15.7	Motley Crue - Dr Feelgood (16).m4a
+BAJO	radio-disney-cl-3.m4a	1062.4	15.7	Oscar Arriagada - El twist del esqueleto (16).m4a
+ALTO	radio-disney-cl-3.m4a	1145.7	29.3	Celia Cruz - La Vida es un Carnaval (29).m4a
+MIXED	radio-disney-cl-3.m4a	1304.1	37.9	Strauss - En las orillas del Danubio azul (38).m4a
+COMPRESS	radio-disney-cl-3.m4a	1470.7	41.7	Congreso - Hijo del Sol Luminoso (42).m4a
+IGUAL	radio-disney-cl-3.m4a	1677.7	5.6	Cindy Lauper - Girls Just Want fun (6).m4a
+BAJO	radio-disney-cl-3.m4a	1845.2	25.9	Bob Marley - Could you be Loved (26).m4a
+ALTO	radio-disney-cl-3.m4a	2012.6	25.8	El Guaton Loyola (26).m4a
+MIXED	radio-disney-cl-3.m4a	2124.8	32.0	Tchakabum - Danza da Maozinha (32).m4a
+COMPRESS	radio-disney-cl-3.m4a	2304.5	25.8	El Guaton Loyola (26).m4a
+IGUAL	radio-disney-cl-3.m4a	2455.8	13.2	Daft Punk - Around the world (13).m4a
+BAJO	radio-disney-cl-3.m4a	2529.9	20.1	Metallica - Enter Sandman (20).m4a
+IGUAL	radio-disney-mx-3.m4a	167.4	32.4	La Cripta - El Gato Volador (32).m4a
+BAJO	radio-disney-mx-3.m4a	303.0	37.9	Strauss - En las orillas del Danubio azul (38).m4a
+ALTO	radio-disney-mx-3.m4a	441.5	33.2	Michael Jackson - Thriller (33).m4a
+MIXED	radio-disney-mx-3.m4a	646.5	24.0	Ilegales - Taqui Taqui (24).m4a
+COMPRESS	radio-disney-mx-3.m4a	736.3	34.3	Paul Anka - Diana (34).m4a
+IGUAL	radio-disney-mx-3.m4a	936.0	24.0	Ilegales - Taqui Taqui (24).m4a
+BAJO	radio-disney-mx-3.m4a	1024.8	15.7	Oscar Arriagada - El twist del esqueleto (16).m4a
+ALTO	radio-disney-mx-3.m4a	1105.6	25.8	El Guaton Loyola (26).m4a
+MIXED	radio-disney-mx-3.m4a	1229.4	24.0	Ilegales - Taqui Taqui (24).m4a
+COMPRESS	radio-disney-mx-3.m4a	1334.8	13.2	Daft Punk - Around the world (13).m4a
+IGUAL	radio-disney-mx-3.m4a	1525.1	34.3	Paul Anka - Diana (34).m4a
+BAJO	radio-disney-mx-3.m4a	1647.2	33.2	Michael Jackson - Thriller (33).m4a
+ALTO	radio-disney-mx-3.m4a	1818.8	13.2	Daft Punk - Around the world (13).m4a
+MIXED	radio-disney-mx-3.m4a	1963.4	25.9	Bob Marley - Could you be Loved (26).m4a
+COMPRESS	radio-disney-mx-3.m4a	2051.7	33.2	Michael Jackson - Thriller (33).m4a
+IGUAL	radio-disney-mx-3.m4a	2206.5	23.2	The Doors - Break on through (23).m4a
+BAJO	radio-disney-mx-3.m4a	2299.0	34.3	Paul Anka - Diana (34).m4a
+ALTO	radio-disney-mx-3.m4a	2456.9	15.7	Motley Crue - Dr Feelgood (16).m4a
+MIXED	radio-disney-mx-3.m4a	2587.4	24.0	Ilegales - Taqui Taqui (24).m4a

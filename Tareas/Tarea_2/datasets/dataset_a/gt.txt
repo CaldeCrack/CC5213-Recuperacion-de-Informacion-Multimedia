@@ -1,0 +1,77 @@
+IGUAL	radio-disney-ar-7.m4a	74.5	14.4	Carlos Gardel - Por una Cabeza (14).m4a
+BAJO	radio-disney-ar-7.m4a	166.8	17.8	Vivialdi - Invierno - Allegro non molto (18).m4a
+ALTO	radio-disney-ar-7.m4a	352.9	27.1	Mala junta - Chileno de corazon (27).m4a
+MIXED	radio-disney-ar-7.m4a	542.8	35.5	Los Jaivas - Sube a nacer conmigo hermano (36).m4a
+COMPRESS	radio-disney-ar-7.m4a	650.0	36.6	Star Wars - The Imperial March (37).m4a
+IGUAL	radio-disney-ar-7.m4a	764.6	17.1	Mago de Oz - La posada de los muertos (17).m4a
+BAJO	radio-disney-ar-7.m4a	860.5	12.5	Pink Floyd -  Another Brick In the wall part 2 (12).m4a
+ALTO	radio-disney-ar-7.m4a	1038.2	14.4	Carlos Gardel - Por una Cabeza (14).m4a
+MIXED	radio-disney-ar-7.m4a	1122.9	17.8	Vivialdi - Invierno - Allegro non molto (18).m4a
+COMPRESS	radio-disney-ar-7.m4a	1220.4	10.9	Depeche Mode - Personal Jesus (11).m4a
+IGUAL	radio-disney-ar-7.m4a	1344.7	42.1	Mazapan - Una cuncuna amarilla (42).m4a
+BAJO	radio-disney-ar-7.m4a	1532.5	35.5	Los Jaivas - Sube a nacer conmigo hermano (36).m4a
+ALTO	radio-disney-ar-7.m4a	1657.6	12.4	Michael Jackson - Thriller (12).m4a
+MIXED	radio-disney-ar-7.m4a	1849.4	10.9	Depeche Mode - Personal Jesus (11).m4a
+COMPRESS	radio-disney-ar-7.m4a	2028.0	34.4	Los Tres - La primera vez (34).m4a
+IGUAL	radio-disney-ar-7.m4a	2137.0	14.1	Venga Boys - We Like The Party (14).m4a
+BAJO	radio-disney-ar-7.m4a	2315.5	27.1	Mala junta - Chileno de corazon (27).m4a
+ALTO	radio-disney-ar-7.m4a	2511.3	14.1	Venga Boys - We Like The Party (14).m4a
+IGUAL	radio-disney-br-7.m4a	123.6	12.4	Michael Jackson - Thriller (12).m4a
+BAJO	radio-disney-br-7.m4a	251.4	23.2	Jose Luis Perales - Un Velero Llamado Libertad (23).m4a
+ALTO	radio-disney-br-7.m4a	406.2	36.6	Star Wars - The Imperial March (37).m4a
+MIXED	radio-disney-br-7.m4a	543.8	17.1	Mago de Oz - La posada de los muertos (17).m4a
+COMPRESS	radio-disney-br-7.m4a	651.2	34.4	Los Tres - La primera vez (34).m4a
+IGUAL	radio-disney-br-7.m4a	809.6	29.9	Chemical Brothers - Hey Girls Hey Boys (30).m4a
+BAJO	radio-disney-br-7.m4a	1007.6	14.1	Venga Boys - We Like The Party (14).m4a
+ALTO	radio-disney-br-7.m4a	1157.4	32.8	Barry White - never, never gonna give you up (33).m4a
+MIXED	radio-disney-br-7.m4a	1297.6	36.6	Star Wars - The Imperial March (37).m4a
+COMPRESS	radio-disney-br-7.m4a	1412.6	10.9	Depeche Mode - Personal Jesus (11).m4a
+IGUAL	radio-disney-br-7.m4a	1519.4	10.7	Metallica - Enter Sandman (11).m4a
+BAJO	radio-disney-br-7.m4a	1627.0	29.9	Chemical Brothers - Hey Girls Hey Boys (30).m4a
+ALTO	radio-disney-br-7.m4a	1778.1	34.4	Los Tres - La primera vez (34).m4a
+MIXED	radio-disney-br-7.m4a	1925.6	29.9	Chemical Brothers - Hey Girls Hey Boys (30).m4a
+COMPRESS	radio-disney-br-7.m4a	2092.7	10.9	Depeche Mode - Personal Jesus (11).m4a
+IGUAL	radio-disney-br-7.m4a	2199.9	35.5	Los Jaivas - Sube a nacer conmigo hermano (36).m4a
+BAJO	radio-disney-br-7.m4a	2373.5	27.2	Erasure - A Little Respect (27).m4a
+ALTO	radio-disney-br-7.m4a	2488.4	36.6	Star Wars - The Imperial March (37).m4a
+MIXED	radio-disney-br-7.m4a	2608.2	29.9	Chemical Brothers - Hey Girls Hey Boys (30).m4a
+IGUAL	radio-disney-cl-7.m4a	147.2	42.1	Mazapan - Una cuncuna amarilla (42).m4a
+BAJO	radio-disney-cl-7.m4a	292.5	27.2	Erasure - A Little Respect (27).m4a
+ALTO	radio-disney-cl-7.m4a	414.7	14.4	Carlos Gardel - Por una Cabeza (14).m4a
+MIXED	radio-disney-cl-7.m4a	579.9	14.1	Venga Boys - We Like The Party (14).m4a
+COMPRESS	radio-disney-cl-7.m4a	694.0	32.8	Barry White - never, never gonna give you up (33).m4a
+IGUAL	radio-disney-cl-7.m4a	790.3	12.5	Pink Floyd -  Another Brick In the wall part 2 (12).m4a
+BAJO	radio-disney-cl-7.m4a	922.6	32.8	Barry White - never, never gonna give you up (33).m4a
+ALTO	radio-disney-cl-7.m4a	1067.6	23.2	Jose Luis Perales - Un Velero Llamado Libertad (23).m4a
+MIXED	radio-disney-cl-7.m4a	1248.3	17.1	Mago de Oz - La posada de los muertos (17).m4a
+COMPRESS	radio-disney-cl-7.m4a	1362.8	25.7	Michael Jackson - Bad (26).m4a
+IGUAL	radio-disney-cl-7.m4a	1484.9	32.8	Barry White - never, never gonna give you up (33).m4a
+BAJO	radio-disney-cl-7.m4a	1646.4	36.6	Star Wars - The Imperial March (37).m4a
+ALTO	radio-disney-cl-7.m4a	1788.5	10.9	Depeche Mode - Personal Jesus (11).m4a
+MIXED	radio-disney-cl-7.m4a	1890.8	9.3	Bob Marley - Could you be Loved (9).m4a
+COMPRESS	radio-disney-cl-7.m4a	1998.9	35.5	Los Jaivas - Sube a nacer conmigo hermano (36).m4a
+IGUAL	radio-disney-cl-7.m4a	2095.7	9.3	Bob Marley - Could you be Loved (9).m4a
+BAJO	radio-disney-cl-7.m4a	2281.3	27.2	Erasure - A Little Respect (27).m4a
+ALTO	radio-disney-cl-7.m4a	2415.8	35.5	Los Jaivas - Sube a nacer conmigo hermano (36).m4a
+MIXED	radio-disney-cl-7.m4a	2607.3	14.4	Carlos Gardel - Por una Cabeza (14).m4a
+IGUAL	radio-disney-mx-7.m4a	112.7	10.7	Metallica - Enter Sandman (11).m4a
+BAJO	radio-disney-mx-7.m4a	256.2	17.8	Vivialdi - Invierno - Allegro non molto (18).m4a
+ALTO	radio-disney-mx-7.m4a	346.0	27.2	Erasure - A Little Respect (27).m4a
+MIXED	radio-disney-mx-7.m4a	477.3	10.7	Metallica - Enter Sandman (11).m4a
+COMPRESS	radio-disney-mx-7.m4a	592.3	25.7	Michael Jackson - Bad (26).m4a
+IGUAL	radio-disney-mx-7.m4a	777.8	14.4	Carlos Gardel - Por una Cabeza (14).m4a
+BAJO	radio-disney-mx-7.m4a	946.2	17.8	Vivialdi - Invierno - Allegro non molto (18).m4a
+ALTO	radio-disney-mx-7.m4a	1089.1	32.8	Barry White - never, never gonna give you up (33).m4a
+MIXED	radio-disney-mx-7.m4a	1204.5	27.2	Erasure - A Little Respect (27).m4a
+COMPRESS	radio-disney-mx-7.m4a	1293.8	10.9	Depeche Mode - Personal Jesus (11).m4a
+IGUAL	radio-disney-mx-7.m4a	1409.6	14.8	Angela Carrasco - Quererte a ti (15).m4a
+BAJO	radio-disney-mx-7.m4a	1503.2	12.4	Michael Jackson - Thriller (12).m4a
+ALTO	radio-disney-mx-7.m4a	1647.1	36.6	Star Wars - The Imperial March (37).m4a
+MIXED	radio-disney-mx-7.m4a	1797.6	14.8	Angela Carrasco - Quererte a ti (15).m4a
+COMPRESS	radio-disney-mx-7.m4a	1884.7	10.7	Metallica - Enter Sandman (11).m4a
+IGUAL	radio-disney-mx-7.m4a	1960.0	36.6	Star Wars - The Imperial March (37).m4a
+BAJO	radio-disney-mx-7.m4a	2059.1	17.8	Vivialdi - Invierno - Allegro non molto (18).m4a
+ALTO	radio-disney-mx-7.m4a	2255.5	10.7	Metallica - Enter Sandman (11).m4a
+MIXED	radio-disney-mx-7.m4a	2363.4	25.7	Michael Jackson - Bad (26).m4a
+COMPRESS	radio-disney-mx-7.m4a	2491.4	12.5	Pink Floyd -  Another Brick In the wall part 2 (12).m4a
+IGUAL	radio-disney-mx-7.m4a	2616.4	35.5	Los Jaivas - Sube a nacer conmigo hermano (36).m4a
