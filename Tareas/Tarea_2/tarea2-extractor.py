@@ -35,18 +35,31 @@ def tarea2_extractor(dir_audios, dir_descriptores):
         print("ERROR: ya existe directorio {}".format(dir_descriptores))
         sys.exit(1)
     os.makedirs(dir_descriptores, exist_ok=True)
+    # Crear descriptores y timestamps
     descriptores = []
+    nombres = []
+    tiempos = []
     for nombre in os.listdir(dir_audios):
+        # Descriptor
         ruta_archivo = "{}/{}".format(dir_audios, nombre)
         archivo_wav = convertir_a_wav(ruta_archivo, 22050, dir_descriptores)
         descriptor = calcular_descriptores_mfcc(archivo_wav, 2048, 2048, 32)
-        if len(descriptores) > 0:
-            descriptores = numpy.vstack([descriptores, descriptor])
-        else:
-            descriptores = descriptor
-    tipo = dir_audios.split("/")[-1]
+        descriptores.extend(descriptor)
+
+        # Timestamps
+        for i in range(0, 2048 * descriptor.shape[0], 2048):
+            nombres.append(nombre)
+            tiempos.append(i / 22050)
+
+    # Guardar descriptores en un archivo
+    tipo = dir_audios.split("/")[-2]
     archivo_descriptor = "{}/{}".format(dir_descriptores, f"descriptores_{tipo}.npy")
     numpy.save(archivo_descriptor, descriptores)
+    # Guardar timestamps en un archivo
+    timestamps_descriptor = "{}/{}".format(dir_descriptores, f"timestamps_{tipo}.data")
+    with open(timestamps_descriptor, 'w') as f:
+        for i in range(0, len(tiempos)):
+            print("{}\t{:7.2f}".format(nombres[i], tiempos[i]), file=f)
 
 # inicio de la tarea
 if len(sys.argv) < 3:

@@ -1,10 +1,8 @@
 # CC5213 - TAREA 2
 # 28 de septiembre de 2023
-# Alumno: [nombre]
+# Alumno: Andrés Calderón Guardia
 
-import sys
-import os.path
-
+import sys, os.path, librosa, numpy, scipy
 
 def tarea2_busqueda(dir_descriptores_q, dir_descriptores_r, dir_resultados_knn):
     if not os.path.isdir(dir_descriptores_q):
@@ -16,18 +14,34 @@ def tarea2_busqueda(dir_descriptores_q, dir_descriptores_r, dir_resultados_knn):
     elif os.path.exists(dir_resultados_knn):
         print("ERROR: ya existe archivo {}".format(dir_resultados_knn))
         sys.exit(1)
-    # Implementar la busqueda
-    #  1-leer descriptores de Q de dir_descriptores_q
-    #  2-leer descriptores de R de dir_descriptores_r
-    #  3-para cada descriptor q localizar el mas cercano en R
-    #     usar cdist o usar indices de busqueda eficiente
-    #  3-crear dir_resultados_knn
-    #    os.makedirs(dir_resultados_knn, exist_ok=True)
-    #  4-escribir los knn en dir_resultados_knn
-    #    incluir tambien los tiempos que representa cada ventana de q y r
-    # borrar la siguiente linea
-    print("ERROR: no implementado!")
+    archivo_canciones = "{}/{}".format(dir_descriptores_r, "descriptores_canciones.npy")
+    descriptores_canciones = numpy.load(archivo_canciones)
+    archivo_radio = "{}/{}".format(dir_descriptores_q, "descriptores_radio.npy")
+    descriptores_radio = numpy.load(archivo_radio)
 
+    matriz_distancias = scipy.spatial.distance.cdist(descriptores_radio, descriptores_canciones, metric='euclidean')
+
+    # nombres de los archivos
+    nombres_canciones = "{}/{}".format(dir_descriptores_r, "timestamps_canciones.data")
+    with open(nombres_canciones) as f:
+        lista_canciones = f.readlines()
+    nombres_radio = "{}/{}".format(dir_descriptores_q, "timestamps_radio.data")
+    with open(nombres_radio) as f:
+        lista_radio = f.readlines()
+
+    #obtener la posicion del más cercano por fila
+    posicion_min = numpy.argmin(matriz_distancias, axis=1)
+    minimo = numpy.amin(matriz_distancias, axis=1)
+
+    os.makedirs(dir_resultados_knn, exist_ok=True)
+    # Guardar resultados en un archivo
+    archivo_resultados = "{}/{}".format(dir_resultados_knn, "knn.data")
+    with open(archivo_resultados, 'w') as f:
+        for i in range(len(lista_radio)):
+            query = lista_radio[i]
+            cancion = lista_canciones[posicion_min[i]]
+            distancia = minimo[i]
+            print("{}\t{}\t{:5.2f}".format(query[:-1], cancion[:-1], distancia), file=f)
 
 # inicio de la tarea
 if len(sys.argv) < 4:
