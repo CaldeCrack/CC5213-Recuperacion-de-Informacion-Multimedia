@@ -42,14 +42,14 @@ def tarea2_extractor(dir_audios, dir_descriptores):
     for nombre in os.listdir(dir_audios):
         # Descriptor
         ruta_archivo = "{}/{}".format(dir_audios, nombre)
-        archivo_wav = convertir_a_wav(ruta_archivo, 22050, dir_descriptores)
-        descriptor = calcular_descriptores_mfcc(archivo_wav, 2048, 2048, 32)
+        archivo_wav = convertir_a_wav(ruta_archivo, 44100, dir_descriptores)
+        descriptor = calcular_descriptores_mfcc(archivo_wav, 4096, 4096, 32)
         descriptores.extend(descriptor)
 
         # Timestamps
-        for i in range(0, 2048 * descriptor.shape[0], 2048):
+        for i in range(0, 4096 * descriptor.shape[0], 4096):
             nombres.append(nombre)
-            tiempos.append(i / 22050)
+            tiempos.append(i / 44100)
 
     # Guardar descriptores en un archivo
     tipo = dir_audios.split("/")[-2]
@@ -59,7 +59,7 @@ def tarea2_extractor(dir_audios, dir_descriptores):
     timestamps_descriptor = "{}/{}".format(dir_descriptores, f"timestamps_{tipo}.data")
     with open(timestamps_descriptor, 'w') as f:
         for i in range(0, len(tiempos)):
-            print("{}\t{:7.2f}".format(nombres[i], tiempos[i]), file=f)
+            print("{}\t{:.2f}".format(nombres[i], tiempos[i]), file=f)
 
 # inicio de la tarea
 if len(sys.argv) < 3:
