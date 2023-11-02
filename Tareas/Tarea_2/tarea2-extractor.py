@@ -5,14 +5,10 @@
 import sys, os.path, subprocess, librosa, numpy
 
 def calcular_descriptores_mfcc(archivo_wav, samples_por_ventana, samples_salto, dimension):
-    # leer audio
     samples, sr = librosa.load(archivo_wav, sr=None)
-    print("audio samples={} samplerate={} segundos={:.1f}".format(len(samples), sr, len(samples) / sr))
-    # calcular MFCC
     mfcc = librosa.feature.mfcc(y=samples, sr=sr, n_mfcc=dimension, n_fft=samples_por_ventana, hop_length=samples_salto)
-    # convertir a descriptores por fila
     descriptores = mfcc.transpose()
-    # usualmente es buena idea borrar la(s) primera(s) columna(s)
+    descriptores = numpy.delete(descriptores, 1, 1)
     descriptores = numpy.delete(descriptores, 0, 1)
     return descriptores
 
@@ -21,7 +17,6 @@ def convertir_a_wav(archivo_audio, sample_rate, dir_temporal):
     if os.path.isfile(archivo_wav):
         return archivo_wav
     comando = ["ffmpeg", "-i", archivo_audio, "-ac", "1", "-ar", str(sample_rate), archivo_wav]
-    print("INICIANDO: {}".format(" ".join(comando)))
     proc = subprocess.run(comando, stderr=subprocess.STDOUT)
     if proc.returncode != 0:
         raise Exception("Error ({}) en comando: {}".format(proc.returncode, " ".join(comando)))
@@ -43,7 +38,7 @@ def tarea2_extractor(dir_audios, dir_descriptores):
         # Descriptor
         ruta_archivo = "{}/{}".format(dir_audios, nombre)
         archivo_wav = convertir_a_wav(ruta_archivo, 44100, dir_descriptores)
-        descriptor = calcular_descriptores_mfcc(archivo_wav, 4096, 4096, 32)
+        descriptor = calcular_descriptores_mfcc(archivo_wav, 4096, 4096, 64)
         descriptores.extend(descriptor)
 
         # Timestamps

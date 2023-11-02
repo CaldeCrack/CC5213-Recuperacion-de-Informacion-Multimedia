@@ -4,7 +4,6 @@
 
 import sys, os.path
 
-# promedio de las distancias calculadas para la canción encontrada
 def calcular_confianza(lista, valor, index, mean=False):
     suma = 0
     n = 0
@@ -25,7 +24,7 @@ def buscar_secuencias_similares(lista):
     canciones = []
     res = []
     K = 25
-    densidad_minima = 17
+    densidad_minima = 15
     for linea in lista:
         canciones.append(linea.split("\t")[2])
     for i in range(0, len(canciones), K):
@@ -87,9 +86,11 @@ def tarea2_deteccion(dir_resultados_knn, file_resultados_txt):
             u_indice = int(canciones[i][5])
             linea_inicial = similares[p_indice].split("\t")
             linea_final = similares[u_indice].split("\t")
+            largo = round(float(linea_final[1])-float(linea_inicial[1]), 2)
+            if largo <= 5.0 or 45 <= largo:
+                continue
             radio = canciones[i][0]
             desde = canciones[i][1]
-            largo = round(float(linea_final[1])-float(linea_inicial[1]), 2)
             cancion = linea_inicial[2]
             confianza = canciones[i][6]
             print("{}\t{}\t{}\t{}\t{}".format(radio, desde, largo, cancion, confianza), file=f)

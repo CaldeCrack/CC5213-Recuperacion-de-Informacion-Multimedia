@@ -18,8 +18,7 @@ def tarea2_busqueda(dir_descriptores_q, dir_descriptores_r, dir_resultados_knn):
     descriptores_canciones = numpy.load(archivo_canciones)
     archivo_radio = "{}/{}".format(dir_descriptores_q, "descriptores_radio.npy")
     descriptores_radio = numpy.load(archivo_radio)
-
-    matriz_distancias = scipy.spatial.distance.cdist(descriptores_radio, descriptores_canciones, metric='euclidean')
+    matriz_distancias = scipy.spatial.distance.cdist(descriptores_radio, descriptores_canciones, metric='cityblock')
 
     # nombres de los archivos
     nombres_canciones = "{}/{}".format(dir_descriptores_r, "timestamps_canciones.data")
