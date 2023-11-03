@@ -8,6 +8,7 @@ def calcular_descriptores_mfcc(archivo_wav, samples_por_ventana, samples_salto, 
     samples, sr = librosa.load(archivo_wav, sr=None)
     mfcc = librosa.feature.mfcc(y=samples, sr=sr, n_mfcc=dimension, n_fft=samples_por_ventana, hop_length=samples_salto)
     descriptores = mfcc.transpose()
+    descriptores = numpy.delete(descriptores, 2, 1)
     descriptores = numpy.delete(descriptores, 1, 1)
     descriptores = numpy.delete(descriptores, 0, 1)
     return descriptores
@@ -36,15 +37,17 @@ def tarea2_extractor(dir_audios, dir_descriptores):
     tiempos = []
     for nombre in os.listdir(dir_audios):
         # Descriptor
+        sample_rate = 44100
+        samples = 4096
         ruta_archivo = "{}/{}".format(dir_audios, nombre)
-        archivo_wav = convertir_a_wav(ruta_archivo, 44100, dir_descriptores)
-        descriptor = calcular_descriptores_mfcc(archivo_wav, 4096, 4096, 64)
+        archivo_wav = convertir_a_wav(ruta_archivo, sample_rate, dir_descriptores)
+        descriptor = calcular_descriptores_mfcc(archivo_wav, samples, samples, 64)
         descriptores.extend(descriptor)
 
         # Timestamps
-        for i in range(0, 4096 * descriptor.shape[0], 4096):
+        for i in range(0, samples * descriptor.shape[0], samples):
             nombres.append(nombre)
-            tiempos.append(i / 44100)
+            tiempos.append(i / sample_rate)
 
     # Guardar descriptores en un archivo
     tipo = dir_audios.split("/")[-2]

@@ -23,8 +23,8 @@ def calcular_confianza(lista, valor, index, mean=False):
 def buscar_secuencias_similares(lista):
     canciones = []
     res = []
-    K = 25
-    densidad_minima = 15
+    K = 40
+    densidad_minima = 20
     for linea in lista:
         canciones.append(linea.split("\t")[2])
     for i in range(0, len(canciones), K):
@@ -58,7 +58,7 @@ def condensar_duplicados_consecutivos(lista):
         linea = lista[i]
         if linea[2] != ultimo[2]:
             if ultimo[0] and i != j:
-                res[-1][5] = ultimo[5]
+                res[-1][5] = float(ultimo[5]) + 2.2
                 res[-1][6] = calcular_confianza(lista[j:i], ultimo[2], 6, mean=True)
             j = i
             res.append(linea)
@@ -86,13 +86,13 @@ def tarea2_deteccion(dir_resultados_knn, file_resultados_txt):
             u_indice = int(canciones[i][5])
             linea_inicial = similares[p_indice].split("\t")
             linea_final = similares[u_indice].split("\t")
-            largo = round(float(linea_final[1])-float(linea_inicial[1]), 2)
-            if largo <= 5.0 or 45 <= largo:
+            largo = round(float(linea_final[1]) - float(linea_inicial[1]), 2)
+            confianza = canciones[i][6]
+            if largo <= 4.0 or 44.0 <= largo or confianza >= 6.0:
                 continue
             radio = canciones[i][0]
             desde = canciones[i][1]
             cancion = linea_inicial[2]
-            confianza = canciones[i][6]
             print("{}\t{}\t{}\t{}\t{}".format(radio, desde, largo, cancion, confianza), file=f)
 
 # inicio de la tarea
