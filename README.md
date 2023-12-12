@@ -5,6 +5,7 @@ Proyectos de recuperación de información multimedia.
 
 - [Mini-control 1](MiniControles/MiniControl1/): Imágenes
 - [Mini-control 2](MiniControles/MiniControl2/): Audio y Video
+- [Mini-control 3](MiniControles/MiniControl3/): Texto, árboles, PCA e índices métricos
 
 ## Tareas
 
